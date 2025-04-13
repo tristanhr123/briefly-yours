@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +17,7 @@
     .container {
       max-width: 720px;
       margin: 0 auto;
-      padding: 3rem 1.5rem;
+      padding:  3rem 1.5rem;
       text-align: center;
     }
     .logo {
@@ -38,7 +39,7 @@
       gap: 1rem;
       margin: 2rem 0;
     }
-    input[type="email"] {
+    input[type="email"], select {
       padding: 1rem;
       font-size: 1rem;
       border: 1px solid #ccc;
@@ -47,7 +48,7 @@
       max-width: 420px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     }
-    input[type="email"]:focus {
+    input:focus, select:focus {
       border-color: #334155;
       outline: none;
       box-shadow: 0 0 0 2px rgba(51, 65, 85, 0.2);
@@ -117,6 +118,13 @@
     <h1>Swipe-worthy news without the scroll.</h1>
     <form action="https://formspree.io/f/mldjzkll" method="POST">
       <input type="email" name="email" placeholder="Enter your email" required />
+      <select name="tone" required>
+        <option value="" disabled selected>Choose your style</option>
+        <option value="casual">🧑‍🎤 Casual</option>
+        <option value="serious">📊 Serious</option>
+        <option value="humorous">😂 Humorous</option>
+        <option value="investor">💸 Investor</option>
+      </select>
       <button type="submit">Subscribe Free</button>
     </form>
     <div id="form-message">Thanks for subscribing!</div>
